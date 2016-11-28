@@ -1,0 +1,74 @@
+<div id="overlay-body"></div>
+<nav class="navbar navbar-default" id="hd-nav-defaul-1">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" onclick="openNav()">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+	      	<a class="navbar-brand hd-logo" href="#">
+	        	<%=image_tag('logo_vital_shop-01.png', alt: 'Logo')%>
+	      	</a>
+	    </div>
+			<ul class="nav navbar-nav navbar-right">
+	        <li class="hd-img-after"><a href="#">Andrea <%=image_tag('no_perfil_vital-01-02.png', class: 'hd-img-profile', alt: 'img-profile')%></a></li>
+	        <li class="hd-img-after"><a href="#">Productos</a></li>
+	        <li>
+	        	<a href="#"><%=image_tag('iconos_notificacion_y_mensaje-01.png', class: 'hd-img-16', alt:'Notificacion')%></a>
+	        </li>
+	        <li class="hd-img-after">
+	        	<a href="#" id="hd-letter"><%=image_tag('iconos_notificacion_y_mensaje-02.png', class: 'hd-img-16', alt:'Mensajes')%></a>
+	        </li>
+	        <li class="op"><a href="#">Opciones</a></li>
+  		</ul>
+		</div>
+	</nav>
+
+	<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closeBtnSide" onclick="closeNav()">&times;</a>
+  	<a href="#">Perfil</a>
+  	<a href="#">Notificaciones</a>
+  	<a href="#">Mensajes</a>
+  	<a href="#">Opciones</a>
+  	<a href="#" class="first-h2">Nutricíon deportiva</a>
+  	<a href="#">Quemadores</a>
+  	<a href="#">Bienestar y salud</a>
+  	<a href="#">Blog</a>
+  	<a href="#">Outlet</a>
+  	<a href="#">¿Cómo comprar?</a>
+  	<a href="#">Mercado saludable</a>
+</div>
+<!--Inicio container fluid-->
+<div class="container-fluid" id="hm-main-container">
+	<!--Inicio Header secundario-->
+	<div class="row" id="hd-nav-2">
+		<form class="col-md-3 col-sm-6 col-xs-12">
+	        <div class="form-group hd-search">
+	          <input type="text" class="form-control" placeholder="Buscar">
+	        </div>
+	    </form>
+	    <ul class="list-inline col-md-9 hd-info-2">
+		  	<li class="active"><a href="#">Nutricíon deportiva</a></li>
+		  	<li><a href="#">Quemadores</a></li>
+		  	<li><a href="#">Bienestar y salud</a></li>
+		  	<li><a href="#">Blog</a></li>
+		  	<li><a href="#">Outlet</a></li>
+		  	<li><a href="#">¿Cómo comprar?</a></li>
+		  	<li><a href="#">Mercado saludable</a></li>
+		</ul>
+	</div>
+	<!--./FinHeader secundario-->
+	<!--Inicio seccion pesas-->
+	<section id="hm-pesas">
+		<div class="row" id="hm-pesas-main">
+			<div class="col-sm-2 col-xs-4 col-sm-offset-5 col-xs-offset-4 hm-pesas-logo">
+				<%=image_tag('logo_bloanco-01.png', class: 'img-responsive', alt: 'Logo blanco')%>
+			</div>
+			<div class="col-sm-7 col-xs-8 col-xs-offset-2 text-center hm-pesas-info">
+				<p>UNA GRAN COLLECCIÓN DE SUPLEMENTOS PARA COMPLETAR TU ENTRENAMIENTO</p>
+			</div>
+		</div> 
+    </section><!--./Fin seccion pesas-->
+</div><!--./Fin container-fluid-->

@@ -1,0 +1,2 @@
+module TestForViewsHelper
+end

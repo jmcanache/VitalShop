@@ -1,0 +1,671 @@
+<div class="container-fluid" id="cp-main-container">
+	<div class="row cp-main-nav-tab center-block"> 
+      	<!--Inicio Tabs header -->
+      	<div class="col-md-12 visible-md visible-lg">
+           	<ul class="nav nav-tabs content-tabs responsive" id="cp-header-content" role="tablist">
+                <li class="active" id="cp-tab-informacion"><a href="#cp-informacion" role="tab" data-toggle="tab">Información</a></li>
+                <li id="cp-tab-directorio"><a href="#cp-directorio" role="tab" data-toggle="tab">Directorio</a></li>
+                <li id="cp-tab-pedidos"><a href="#cp-pedidos" role="tab" data-toggle="tab">Pedidos</a></li>
+                <li id="cp-tab-compras"><a href="#cp-lista-compras" role="tab" data-toggle="tab">Lista de compras</a></li>
+           		<li id="cp-tab-amigos"><a href="#cp-invitar-amigos" role="tab" data-toggle="tab">invitar amigos</a></li>
+            	<li id="cp-tab-tarjetas"><a href="#cp-tarjetas-credito" role="tab" data-toggle="tab">Tarjetas de crédito</a></li>
+            	<li id="cp-tab-hoja"><a href="#cp-hoja-informativa" role="tab" data-toggle="tab">Hoja informativa</a></li>
+            </ul>
+        </div><!-- ./Fin Tabs header -->
+
+        <!--Inicio Tabs contenido (escondido para 991px hacia abajo) -->
+        <div class="col-md-12 col-xs-10 col-md-offset-0 col-xs-offset-1 visible-md visible-lg">
+            <div class=" tab-content responsive" id="cp-body-content">
+            	<!--Inicio Tab Informacion-->
+             	<div class="tab-pane fade in active" id="cp-informacion">
+              		<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+              			<form class="row cp-formulario" id="cp-formulario-info">
+                  			<div class="col-sm-6">
+                  				<h3>Información de cuenta</h3>
+								<div class="form-group">
+								    <label for="cp-info-nombre">Nombre*</label>
+								    <input type="text" class="form-control" id="cp-info-nombre">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-apellido">Apellido*</label>
+								    <input type="text" class="form-control" id="cp-info-apellido">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-correo">Correo electrónico</label>
+								    <input type="text" class="form-control" id="cp-info-correo">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-pais">País</label>
+								    <input type="text" class="form-control" id="cp-info-pais">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-ciudad">Ciudad</label>
+								    <input type="text" class="form-control" id="cp-info-ciudad">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-direccion">Dirección</label>
+								    <input type="text" class="form-control" id="cp-info-direccion">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-telefono">Teléfono</label>
+								    <input type="text" class="form-control" id="cp-info-telefono">
+								</div>
+								<br/>
+
+								<h3>Cambiar contraseña</h3>
+								<div class="form-group">
+								    <label for="cp-info-contraseña">Contraseña</label>
+								    <input type="text" class="form-control" id="cp-info-contraseña">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-nueva-contraseña">Nueva contraseña</label>
+								    <input type="text" class="form-control" id="cp-info-nueva-contraseña">
+								</div>
+								<div class="form-group">
+								    <label for="cp-info-confirmar">Confirmar nueva contraseña</label>
+								    <input type="text" class="form-control" id="cp-info-confirmar">
+								</div>
+							</div>
+							<div class="col-sm-6 text-center" id="cp-image-profile">
+								<%=image_tag('no_perfil_vital-01-01.png', alt: "imagen-perfil")%>
+								<p>Subir foto de perfil</p>
+							</div>
+							<div class="col-sm-12">
+								<button type="submit" class="btn green-btn">Guardar cambios</button>
+							</div>
+						</form>	
+              		</div>
+              	</div><!-- ./Fin Tab Informacion-->
+                
+                <!--Inicio Tab Directorio-->
+              	<div class="tab-pane fade" id="cp-directorio">
+                 	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+              			<form class="row cp-formulario" id="cp-formulario-dir">
+              				<div class="col-sm-12">
+              					<h3>Tus Direcciones</h3>
+              				</div>
+                  			<div class="col-sm-6">
+								<div class="form-group">
+								    <label for="cp-dir-pais">País</label>
+								    <input type="text" class="form-control" id="cp-dir-pais">
+								</div>
+								<div class="form-group">
+								    <label for="cp-dir-ciudad">Ciudad</label>
+								    <input type="text" class="form-control" id="cp-dir-ciudad">
+								</div>
+								<div class="form-group">
+								    <label for="cp-dir-direcion">Dirección</label>
+								    <input type="text" class="form-control" id="cp-dir-direcion">
+								</div>
+								<div class="form-group cp-marbot-0">
+								    <label for="cp-dir-referencias">Referencias</label>
+								    <input type="text" class="form-control" id="cp-dir-referencias">
+								</div>
+								<div class="text-center cp-marbot-20">
+									<a class="formulario-link" href="#">Agregar nueva dirección</a>
+								</div>
+							</div>
+							<div class="col-sm-6 text-center" id="cp-image-map">
+								<%=image_tag('http://d32ogoqmya1dw8.cloudfront.net/images/sp/library/google_earth/google_maps_hello_world.jpg', class: 'img-responsive', alt: "provisional-map")%>
+							</div>
+							<div class="col-sm-12">
+								<button type="submit" class="btn green-btn">Guardar cambios</button>
+							</div>
+						</form>	
+              		</div>
+              	</div><!--./ Fin Tab directorio-->
+             	
+             	<!--Inicio Tab Pedidos-->
+              	<div class="tab-pane fade" id="cp-pedidos">
+              		<div class="col-sm-8 col-xs-10 col-sm-offset-2 col-xs-offset-1 cp-contenido-responsivo">
+              			<h3>Historial pedidos</h3>
+              		</div>
+              		<div class="col-sm-10 col-xs-12 col-sm-offset-1">
+                     	<div class="table-responsive">
+						  <table class="table">
+						    <thead>
+						    	<th>Fecha</th>
+						    	<th>Items</th>
+						    	<th>Valor</th>
+						    	<th>Ver factura</th>
+						    </thead>
+						    <tbody>
+						    	<tr>
+						    		<td>11/03/2016</td>
+						    		<td>12</td>
+						    		<td>$345,000</td>
+						    		<td><a href="#">+</a></td>
+						    	</tr>
+						    	<tr>
+						    		<td>11/03/2016</td>
+						    		<td>12</td>
+						    		<td>$345,000</td>
+						    		<td><a href="#">+</a></td>
+						    	</tr>
+						    	<tr>
+						    		<td>11/03/2016</td>
+						    		<td>12</td>
+						    		<td>$345,000</td>
+						    		<td><a href="#">+</a></td>
+						    	</tr>
+						    </tbody>
+						  </table>
+						</div>
+					</div>
+              	</div><!--./ Fin Tab pedidos-->
+             
+             	<!--Inicio Tab Listas de compras-->
+              	<div class="tab-pane fade" id="cp-lista-compras">
+              		<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+                     	<div class="col-xs-12" id="cp-listas-titulo">
+                  			<h3>Mis lista de compras</h3>
+                  		</div>
+                  		<div class="col-xs-12 cp-listas-informacion">
+	                  		<div class="col-xs-12 cp-listas-nombre">
+	                  			<p>Lista 1</p>
+	                  		</div>
+	                  		<div class="col-xs-12 cp-listas-contenido">
+	                  			<div class="table-responsive">
+		                  			<table class="table">
+		                  				<tbody>
+		                  					<tr>
+		                  						<td>Item 1</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 2</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 3</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 4</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 5</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 6</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  					<tr>
+		                  						<td>Item 7</td>
+		                  						<td><a href="#">ver detalle</a></td>
+		                  						<td>precio</td>
+		                  					</tr>
+		                  				</tbody>
+		                  			</table>
+		                  		</div>
+	                  		</div>
+	                  	</div>
+	                  	<div class="col-xs-12 text-right" id="cp-listas-enlaces">
+                  			<a href="#">Añadir</a>
+                  			<a href="#">Hacer pedido</a>
+                  			<a href="#">Nueva lista</a>
+                  		</div>
+                  		<div class="col-xs-12" id="cp-listas-btn">
+                  			<button class="btn green-btn">Guardar cambios</button>
+                  		</div>
+                  	</div>
+              	</div><!-- ./Fin Tab Listas de compras-->
+
+              	<!--Inicio Tab Invitar amigos-->
+               	<div class="tab-pane fade" id="cp-invitar-amigos">
+                 	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo text-center">
+                 		<h3>Envia invitacion por facebook</h3>
+                 		<h3>o por correo electronico</h3>
+                 	</div>
+              	</div><!--Fin Tab Invitar amigos-->
+
+              	<!--Inicio Tab Tarjetas de credito-->
+               	<div class="tab-pane fade" id="cp-tarjetas-credito">
+                 	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+              			<form class="row cp-formulario" id="cp-formulario-ped">
+                  			<div class="col-sm-6">
+                  				<div class="col-sm-12">
+                  					<h3>Agregar tarjeta</h3>
+                  				</div>
+								<div class="form-group">
+								    <label for="cp-ped-numero">Número</label>
+								    <input type="text" class="form-control" id="cp-ped-numero">
+								</div>
+								<div class="form-group">
+								    <label for="cp-ped-expiracion">Fecha de expiración</label>
+								    <input type="text" class="form-control" id="cp-ped-expiracion">
+								</div>
+								<div class="form-group">
+								    <label for="cp-ped-codigo">Código de seguridad</label>
+								    <input type="text" class="form-control" id="cp-ped-codigo">
+								</div>
+								<div class="form-group cp-marbot-0">
+								    <label for="cp-ped-titulas">Nombre titular</label>
+								    <input type="text" class="form-control" id="cp-ped-titulas">
+								</div>
+								<div class="text-right cp-marbot-20">
+									<a class="formulario-link" href="#">Agregar nueva tarjeta</a>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="col-sm-12">
+                  					<h3>Agregar paypal</h3>
+                  				</div>
+                  				<div class="form-group cp-marbot-0">
+								    <label for="cp-ped-cuenta">Cuenta</label>
+								    <input type="text" class="form-control" id="cp-ped-cuenta">
+								</div>
+								<div class="text-right cp-marbot-20">
+									<a class="formulario-link" href="#">Agregar nueva cuenta</a>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button type="submit" class="btn green-btn">Guardar cambios</button>
+							</div>
+						</form>	
+              		</div>
+              	</div><!-- ./Fin Tab Tarjetas de credito-->
+
+              	<!--Inicio Tab Hoja informativa-->
+               	<div class="tab-pane fade" id="cp-hoja-informativa">
+               		<!--Inicio de Noticias en bloque de 3-->
+                 	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+                 		<div class="col-xs-12 cp-hoja-titulo">
+                 			<h3>Recibe nuevas promociones a diario</h3>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                 			<div class="cp-hoja-block-3"></div>
+                 			<a href="#">ver mas+</a>
+                 		</div>
+                 	</div><!--Fin de Noticias en bloque de 3-->
+
+              	</div><!--./Fin Tab Hoja informativa-->
+            </div>
+        </div><!--Fin Tabs contenido -->
+
+        <!--Inicio Paneles contenido (escondido para 992px en adelante) -->
+        <div class="panel-group responsive visible-xs visible-sm" id="collapse-cp-header-content">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+        			<h4 class="panel-title">
+        				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-informacion" aria-expanded="true">Información</a>
+        			</h4>
+        		</div>
+        		<div id="collapse-cp-informacion" class="panel-collapse collapse in" aria-expanded="true">
+        			<div class="fade in active panel-body fw-previous-tab-pane" id="cp-informacion">
+	                  	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+	                  		<form class="row cp-formulario" id="cp-formulario-info">
+		                  		<div class="col-sm-6">
+		                  			<h3>Información de cuenta</h3>
+									<div class="form-group">
+										<label for="cp-info-nombre">Nombre*</label>
+										<input type="text" class="form-control" id="cp-info-nombre">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-apellido">Apellido*</label>
+									    <input type="text" class="form-control" id="cp-info-apellido">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-correo">Correo electrónico</label>
+									    <input type="text" class="form-control" id="cp-info-correo">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-pais">País</label>
+									    <input type="text" class="form-control" id="cp-info-pais">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-ciudad">Ciudad</label>
+									    <input type="text" class="form-control" id="cp-info-ciudad">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-direccion">Dirección</label>
+									    <input type="text" class="form-control" id="cp-info-direccion">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-telefono">Teléfono</label>
+									    <input type="text" class="form-control" id="cp-info-telefono">
+									</div>
+									<br>
+
+									<h3>Cambiar contraseña</h3>
+									<div class="form-group">
+									    <label for="cp-info-contraseña">Contraseña</label>
+									    <input type="text" class="form-control" id="cp-info-contraseña">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-nueva-contraseña">Nueva contraseña</label>
+									    <input type="text" class="form-control" id="cp-info-nueva-contraseña">
+									</div>
+									<div class="form-group">
+									    <label for="cp-info-confirmar">Confirmar nueva contraseña</label>
+									    <input type="text" class="form-control" id="cp-info-confirmar">
+									</div>
+								</div>
+								<div class="col-sm-6 text-center" id="cp-image-profile">
+									<%=image_tag('no_perfil_vital-01-01.png', alt: "imagen-perfil")%>
+									<p>Subir foto de perfil</p>
+								</div>
+								<div class="col-sm-12">
+									<button type="submit" class="btn green-btn">Guardar cambios</button>
+								</div>
+							</form>	
+	                  	</div>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+        			<h4 class="panel-title">
+        				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-directorio">Directorio</a>
+        			</h4>
+        		</div>
+        		<div id="collapse-cp-directorio" class="panel-collapse collapse">
+        			<div class="fade in panel-body fw-previous-tab-pane" id="cp-directorio">
+             			<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+                  			<form class="row cp-formulario" id="cp-formulario-dir">
+                  				<div class="col-sm-12">
+                  					<h3>Tus Direcciones</h3>
+                  				</div>
+	                  			<div class="col-sm-6">
+									<div class="form-group">
+									    <label for="cp-dir-pais">País</label>
+									    <input type="text" class="form-control" id="cp-dir-pais">
+									</div>
+									<div class="form-group">
+									    <label for="cp-dir-ciudad">Ciudad</label>
+									    <input type="text" class="form-control" id="cp-dir-ciudad">
+									</div>
+									<div class="form-group">
+									    <label for="cp-dir-direcion">Dirección</label>
+									    <input type="text" class="form-control" id="cp-dir-direcion">
+									</div>
+									<div class="form-group cp-marbot-0">
+									    <label for="cp-dir-referencias">Referencias</label>
+									    <input type="text" class="form-control" id="cp-dir-referencias">
+									</div>
+									<div class="text-center cp-marbot-20">
+										<a class="formulario-link" href="#">Agregar nueva dirección</a>
+									</div>
+								</div>
+								<div class="col-sm-6 text-center" id="cp-image-map">
+									<%=image_tag('http://d32ogoqmya1dw8.cloudfront.net/images/sp/library/google_earth/google_maps_hello_world.jpg', class: 'img-responsive', alt: "provisional-map")%>
+								</div>
+								<div class="col-sm-12">
+									<button type="submit" class="btn green-btn">Guardar cambios</button>
+								</div>
+							</form>	
+          				</div>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="panel panel-default">
+          		<div class="panel-heading">
+          			<h4 class="panel-title">
+          				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-pedidos">Pedidos</a>
+          			</h4>
+          		</div>
+          		<div id="collapse-cp-pedidos" class="panel-collapse collapse">
+          			<div class="fade in panel-body fw-previous-tab-pane" id="cp-pedidos">
+      					<div class="col-sm-8 col-xs-10 col-sm-offset-2 col-xs-offset-1 cp-contenido-responsivo">
+          					<h3>Historial pedidos</h3>
+          				</div>
+                  		<div class="col-sm-10 col-xs-12 col-sm-offset-1">
+	                     	<div class="table-responsive">
+							  <table class="table">
+							    <thead>
+							    	<tr><th>Fecha</th>
+							    	<th>Items</th>
+							    	<th>Valor</th>
+							    	<th>Ver factura</th>
+							    </tr></thead>
+							    <tbody>
+							    	<tr>
+							    		<td>11/03/2016</td>
+							    		<td>12</td>
+							    		<td>$345,000</td>
+							    		<td><a href="#">+</a></td>
+							    	</tr>
+							    	<tr>
+							    		<td>11/03/2016</td>
+							    		<td>12</td>
+							    		<td>$345,000</td>
+							    		<td><a href="#">+</a></td>
+							    	</tr>
+							    	<tr>
+							    		<td>11/03/2016</td>
+							    		<td>12</td>
+							    		<td>$345,000</td>
+							    		<td><a href="#">+</a></td>
+							    	</tr>
+							    </tbody>
+							  </table>
+							</div>
+						</div>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="panel panel-default">
+          		<div class="panel-heading">
+          			<h4 class="panel-title">
+          				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-lista-compras">Lista de compras</a>
+          			</h4>
+          		</div>
+          		<div id="collapse-cp-lista-compras" class="panel-collapse collapse">
+          			<div class="fade in panel-body fw-previous-tab-pane" id="cp-lista-compras">
+                  		<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+	                     	<div class="col-xs-12" id="cp-listas-titulo">
+	                  			<h3>Mis lista de compras</h3>
+	                  		</div>
+	                  		<div class="col-xs-12 cp-listas-informacion">
+		                  		<div class="col-xs-12 cp-listas-nombre">
+		                  			<p>Lista 1</p>
+		                  		</div>
+		                  		<div class="col-xs-12 cp-listas-contenido">
+		                  			<div class="table-responsive">
+			                  			<table class="table">
+			                  				<tbody>
+			                  					<tr>
+			                  						<td>Item 1</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 2</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 3</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 4</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 5</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 6</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  					<tr>
+			                  						<td>Item 7</td>
+			                  						<td><a href="#">ver detalle</a></td>
+			                  						<td>precio</td>
+			                  					</tr>
+			                  				</tbody>
+			                  			</table>
+			                  		</div>
+		                  		</div>
+		                  	</div>
+		                  	<div class="col-xs-12 text-right" id="cp-listas-enlaces">
+	                  			<a href="#">Añadir</a>
+	                  			<a href="#">Hacer pedido</a>
+	                  			<a href="#">Nueva lista</a>
+	                  		</div>
+	                  		<div class="col-xs-12" id="cp-listas-btn">
+	                  			<button class="btn green-btn">Guardar cambios</button>
+	                  		</div>
+	                  	</div>
+              		</div>
+          		</div>
+          	</div>
+
+          	<div class="panel panel-default">
+          		<div class="panel-heading">
+          			<h4 class="panel-title">
+          				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-invitar-amigos">invitar amigos</a>
+          			</h4>
+          		</div>
+          		<div id="collapse-cp-invitar-amigos" class="panel-collapse collapse">
+          			<div class="fade in panel-body fw-previous-tab-pane" id="cp-invitar-amigos">
+                     	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo text-center">
+                     		<h3>Envia invitacion por facebook</h3>
+                     		<h3>o por correo electronico</h3>
+                     	</div>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="panel panel-default">
+          		<div class="panel-heading">
+          			<h4 class="panel-title">
+          				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-tarjetas-credito">Tarjetas de crédito</a>
+          			</h4>
+          		</div>
+          		<div id="collapse-cp-tarjetas-credito" class="panel-collapse collapse">
+          			<div class="fade in panel-body fw-previous-tab-pane" id="cp-tarjetas-credito">
+                     	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+                  			<form class="row cp-formulario" id="cp-formulario-ped">
+	                  			<div class="col-sm-6">
+	                  				<div class="col-sm-12">
+	                  					<h3>Agregar tarjeta</h3>
+	                  				</div>
+									<div class="form-group">
+									    <label for="cp-ped-numero">Número</label>
+									    <input type="text" class="form-control" id="cp-ped-numero">
+									</div>
+									<div class="form-group">
+									    <label for="cp-ped-expiracion">Fecha de expiración</label>
+									    <input type="text" class="form-control" id="cp-ped-expiracion">
+									</div>
+									<div class="form-group">
+									    <label for="cp-ped-codigo">Código de seguridad</label>
+									    <input type="text" class="form-control" id="cp-ped-codigo">
+									</div>
+									<div class="form-group cp-marbot-0">
+									    <label for="cp-ped-titulas">Nombre titular</label>
+									    <input type="text" class="form-control" id="cp-ped-titulas">
+									</div>
+									<div class="text-right cp-marbot-20">
+										<a class="formulario-link" href="#">Agregar nueva tarjeta</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="col-sm-12">
+	                  					<h3>Agregar paypal</h3>
+	                  				</div>
+	                  				<div class="form-group cp-marbot-0">
+									    <label for="cp-ped-cuenta">Cuenta</label>
+									    <input type="text" class="form-control" id="cp-ped-cuenta">
+									</div>
+									<div class="text-right cp-marbot-20">
+										<a class="formulario-link" href="#">Agregar nueva cuenta</a>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<button type="submit" class="btn green-btn">Guardar cambios</button>
+								</div>
+							</form>	
+                  		</div>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="panel panel-default">
+          		<div class="panel-heading">
+          			<h4 class="panel-title">
+          				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapse-cp-header-content" href="#collapse-cp-hoja-informativa">Hoja informativa</a>
+          			</h4>
+          		</div>
+
+          		<div id="collapse-cp-hoja-informativa" class="panel-collapse collapse">
+              		<div class="fade in panel-body fw-previous-tab-pane" id="cp-hoja-informativa">
+                   		<!--Inicio de Noticias en bloque de 3-->
+                     	<div class="col-xs-10 col-xs-offset-1 cp-contenido-responsivo">
+                     		<div class="col-xs-12 cp-hoja-titulo">
+                     			<h3>Recibe nuevas promociones a diario</h3>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     		<div class="col-sm-4 col-xs-6 text-right cp-marbot-20 cp-hoja-block-div">
+                     			<div class="cp-hoja-block-3"></div>
+                     			<a href="#">ver mas+</a>
+                     		</div>
+                     	</div><!--Fin de Noticias en bloque de 3-->
+              		</div>
+          		</div>
+        	</div>
+        </div><!--Fin Paneles contenido -->
+    </div>
+    <div class="row">
+    	<div class="col-xs-12 fondo-blanco">
+    		<%=image_tag('fondo_blanco.png')%>
+    	</div>
+    </div>
+</div>
