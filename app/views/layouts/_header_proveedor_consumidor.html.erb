@@ -1,0 +1,42 @@
+<div id="overlay-body"></div>
+<nav class="navbar navbar-default" id="hd-nav-defaul-1">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" onclick="openNav()">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+	      	<a class="navbar-brand hd-logo" href="#">
+	        	<%=image_tag('logo_vital_shop-01.png', alt: 'Logo')%>
+	      	</a>
+	    </div>
+		<ul class="nav navbar-nav navbar-right">
+	        <li class="hd-img-after"><a href="#">Andrea <%=image_tag('no_perfil_vital-01-02.png', class: 'hd-img-profile', alt: 'img-profile')%></a></li>
+	        <li class="hd-img-after"><a href="#">Productos</a></li>
+	        <li>
+	        	<a href="#"><%=image_tag('iconos_notificacion_y_mensaje-01.png', class: 'hd-img-16', alt:'Notificacion')%></a>
+	        </li>
+	        <li class="hd-img-after">
+	        	<a href="#" id="hd-letter"><%=image_tag('iconos_notificacion_y_mensaje-02.png', class: 'hd-img-16', alt:'Mensajes')%></a>
+	        </li>
+	        <li class="op"><a href="#">Opciones</a></li>
+  		</ul>
+	</div>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closeBtnSide" onclick="closeNav()">&times;</a>
+  	<a href="#">Perfil</a>
+  	<a href="#">Notificaciones</a>
+  	<a href="#">Mensajes</a>
+  	<a href="#">Opciones</a>
+  	<a href="#" class="first-h2">Nutricíon deportiva</a>
+  	<a href="#">Quemadores</a>
+  	<a href="#">Bienestar y salud</a>
+  	<a href="#">Blog</a>
+  	<a href="#">Outlet</a>
+  	<a href="#">¿Cómo comprar?</a>
+  	<a href="#">Mercado saludable</a>
+</div>

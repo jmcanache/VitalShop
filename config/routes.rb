@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'test_for_views/configuracion_perfil'
 
+  get 'test_for_views/formulario_proveedor'
+
+  get 'test_for_views/producto_usuario'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

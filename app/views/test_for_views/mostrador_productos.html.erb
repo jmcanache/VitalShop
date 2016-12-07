@@ -1,7 +1,8 @@
 <div class="container-fluid" id="mp-main-container">
-	<div class="row max-width-container"> 
+	<div class="row" id="mp-background"> 
+		<%= render 'layouts/header_enlaces' %>
 		<!--Inicio Filtro-->
-      	<div class="col-sm-3 col-xs-12 mp-filtro-container">
+      	<div class="col-sm-3 col-xs-12 mp-filtro-container margin-container-fluid">
       		<!--Inicio Filtro header -->
       		<div class="mp-curved-bot mp-header-filtro">
 		        <p class='text-center'><strong>Filtro</strong></p>
@@ -257,7 +258,7 @@
 		    </div>
       	</div><!-- ./Fin Filtro-->
       	<!--Inicio productos container-->
-      	<div class="col-sm-9 col-xs-12 mp-products-container">
+      	<div class="col-sm-9 col-xs-12 mp-products-container margin-container-fluid">
       		<!--Inicio producto individual-->
       		<div class="col-md-4 col-xs-6 text-center mp-product">
 			 	<div class="mp-product-image">
@@ -457,11 +458,38 @@
 			   	</div>
 			</div><!--./Fin producto individual-->
       	</div><!-- ./Fin productos container-->
-    </div><!--./Fin row-->
-
-    <div class="row">
-    	<div class="col-xs-12 fondo-blanco">
+      	<div class="col-xs-12 fondo-blanco">
     		<%=image_tag('fondo_blanco.png')%>
     	</div>
-    </div>
+    </div><!--./Fin row-->
+    <%= render 'test_for_views/nuestra_mision' %>
 </div><!--./Fin container-fluid-->
+
+<script type="text/javascript">
+	// Inicializacion para slide del filtro
+	//mostrador de productos
+    var setMinMax = function(values){
+	    min = values[0].toString();
+	    max = values[1].toString();
+	    if(max.length > 3){ 
+	      max = max.slice(0, (max.length - 3)) + "." + max.slice(-3);
+	    }
+	    if(min.length > 3){ 
+	      min = min.slice(0, (min.length - 3)) + "." + min.slice(-3);
+	    }
+	    $("#min").text('$' + min);
+	    $("#max").text('$' + max);
+	};
+	
+	$(document).ready(function(){
+		var mySlider = $("#ex12c").bootstrapSlider({ id: "slider12c", min: 0, max: 100000, range: true, value: [0, 100000] });  
+		values  = mySlider.bootstrapSlider('getValue');
+		setMinMax(values);
+
+		//Eventos del filtro  
+		mySlider.on("slide", function(){
+		    values  = mySlider.bootstrapSlider('getValue');
+		    setMinMax(values);    
+		});
+	})
+</script>

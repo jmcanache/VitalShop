@@ -13,4 +13,10 @@ class TestForViewsController < ApplicationController
 
   def configuracion_perfil
   end
+
+  def formulario_proveedor
+  end
+
+  def producto_usuario
+  end
 end

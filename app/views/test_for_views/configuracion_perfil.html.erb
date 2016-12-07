@@ -1,7 +1,8 @@
 <div class="container-fluid" id="cp-main-container">
-	<div class="row cp-main-nav-tab center-block"> 
+	<div class="row cp-main-nav-tab" id="cp-background"> 
+		<%= render 'layouts/header_enlaces' %>
       	<!--Inicio Tabs header -->
-      	<div class="col-md-12 visible-md visible-lg">
+      	<div class="col-md-12 visible-md visible-lg margin-container-fluid">
            	<ul class="nav nav-tabs content-tabs responsive" id="cp-header-content" role="tablist">
                 <li class="active" id="cp-tab-informacion"><a href="#cp-informacion" role="tab" data-toggle="tab">Información</a></li>
                 <li id="cp-tab-directorio"><a href="#cp-directorio" role="tab" data-toggle="tab">Directorio</a></li>
@@ -312,7 +313,7 @@
         </div><!--Fin Tabs contenido -->
 
         <!--Inicio Paneles contenido (escondido para 992px en adelante) -->
-        <div class="panel-group responsive visible-xs visible-sm" id="collapse-cp-header-content">
+        <div class="col-xs-12 panel-group responsive visible-xs visible-sm cp-alter-content margin-container-fluid" id="collapse-cp-header-content">
         	<div class="panel panel-default">
         		<div class="panel-heading">
         			<h4 class="panel-title">
@@ -662,9 +663,8 @@
           		</div>
         	</div>
         </div><!--Fin Paneles contenido -->
-    </div>
-    <div class="row">
-    	<div class="col-xs-12 fondo-blanco">
+
+        <div class="col-xs-12 fondo-blanco">
     		<%=image_tag('fondo_blanco.png')%>
     	</div>
     </div>

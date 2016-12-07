@@ -3,6 +3,7 @@
 	<!--Inicio seccion pesas-->
 	<section id="hm-pesas">
 		<div class="row" id="hm-pesas-main">
+      <%= render 'layouts/header_enlaces' %>
 			<div class="col-sm-2 col-xs-4 col-sm-offset-5 col-xs-offset-4 hm-pesas-logo">
 				<%=image_tag('logo_bloanco-01.png', class: 'img-responsive')%>
 			</div>
@@ -165,48 +166,7 @@
 		</div>
 	</section><!--./Fin seccion reason-->
 
-	<!--Inicio seccion mision-->
-    <section id="hm-mission" class="curved-above">
-        <div class="rowr">
-            <div class="bg-container">
-                <div class="row inner-element">
-                    <figure class="col-sm-4 col-xs-8 col-xs-offset-2 col-sm-offset-4">
-                        <%=image_tag('elementos-05.png', class: 'img img-responsive hm-mission-v1')%>
-                    </figure>
-                    <%=image_tag('elementos-06.png', class: 'hm-mission-v2 hidden-xs')%>
-                </div>
-                <div class="row inner-element">
-                    <div class="col-xs-12">
-                        <h4 class="text-center hm-mision-bold">En Vitalshop tenemos la misión de hacer la vida de las personas más sana y saludable.</h4>
-                    </div>  
-                </div>
-                <div class="row inner-element">
-                    <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                        <h1 class="text-center hm-mision-bold">3000+</h1>
-                        <h4 class="text-center hm-mision-bold">Productos saludables</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <h1 class="text-center hm-mision-bold">400+</h1>
-                        <h4 class="text-center hm-mision-bold">Marcas reconocibles</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <h1 class="text-center hm-mision-bold">25 a 50%</h1>
-                        <h4 class="text-center hm-mision-bold">Descuento al por menos</h4>
-                    </div>
-                </div>
-                <div class="row inner-element">
-                    <div class="col-xs-offset-2 col-xs-8">
-                        <p class="text-center">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                          commodo consequat.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </section><!--./Fin seccion mision-->
+	<%= render 'test_for_views/nuestra_mision' %>
 
     <!--Inicio seccion user reviews-->
     <section id="hm-user-reviews">
